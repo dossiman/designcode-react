@@ -14,8 +14,8 @@ a {
 
 .hero {
   height: 920px;
-  background-size: cover;
   background: url('../images/wallpaper3.jpg') center;
+  background-size: cover;
   position: relative;
 }
 
