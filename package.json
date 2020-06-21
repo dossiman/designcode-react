@@ -18,10 +18,12 @@
     "gatsby-source-contentful": "^2.3.16",
     "gatsby-source-filesystem": "^2.3.11",
     "gatsby-transformer-sharp": "^2.5.5",
+    "netlify-lambda": "^1.6.3",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
+    "react-stripe-checkout": "^2.6.3",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
@@ -29,6 +31,7 @@
     "@types/react": "^16.9.38",
     "@types/react-dom": "^16.9.8",
     "@types/react-helmet": "^6.0.0",
+    "@types/stripe": "^7.13.23",
     "@typescript-eslint/eslint-plugin": "^3.3.0",
     "@typescript-eslint/parser": "^3.3.0",
     "eslint": "^7.3.0",
@@ -39,6 +42,7 @@
     "eslint-plugin-react": "^7.20.0",
     "gatsby-plugin-eslint": "^2.0.8",
     "prettier": "2.0.5",
+    "stripe": "^8.64.0",
     "typescript": "^3.9.5"
   },
   "keywords": [
