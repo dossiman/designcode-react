@@ -21,6 +21,7 @@ module.exports = {
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
     // e.g. "@typescript-eslint/explicit-function-return-type": "off",
     'react/prop-types': 'off', // Disable prop-types as we use TypeScript for type checking
+    'prettier/prettier': 'warn',
     '@typescript-eslint/explicit-function-return-type': 'off',
     'graphql/template-strings': [
       'error',

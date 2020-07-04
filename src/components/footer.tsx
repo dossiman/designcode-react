@@ -1,6 +1,4 @@
 import React, { FC } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import { Query } from '../../types/graphql-types';
 import styled from 'styled-components';
 
 const FooterGroup = styled.footer`
@@ -60,40 +58,8 @@ const Copyright = styled.div`
 `;
 
 const Footer: FC = ({ children }) => {
-  const { allContentfulLink }: Query = useStaticQuery(
-    graphql`
-      query {
-        allContentfulLink(sort: { fields: [createdAt], order: ASC }) {
-          edges {
-            node {
-              title
-              url
-              createdAt
-            }
-          }
-        }
-      }
-    `,
-  );
-
   return (
     <FooterGroup>
-      <Text>
-        Tweet “Prototype and build apps with React and Swift. New courses by
-        @MengTo”
-      </Text>
-      <Button>Tweet</Button>
-      <LinkGroup>
-        {allContentfulLink.edges.map(
-          (edge) =>
-            edge.node.url && (
-              <a key={edge.node.url} href={edge.node.url}>
-                {edge.node.title}
-              </a>
-            ),
-        )}
-      </LinkGroup>
-
       <Copyright>{children}</Copyright>
     </FooterGroup>
   );
