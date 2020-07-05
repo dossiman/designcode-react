@@ -1,4 +1,35 @@
-import { createMuiTheme } from '@material-ui/core';
+import createMuiTheme, {
+  Theme,
+  ThemeOptions,
+} from '@material-ui/core/styles/createMuiTheme';
+
+declare module '@material-ui/core/styles/createMuiTheme' {
+  interface Color {
+    common: string;
+    uncommon: string;
+    rare: string;
+    epic: string;
+    legendary: string;
+    heroGradient: string;
+  }
+
+  interface Theme {
+    color: Color;
+  }
+
+  interface ThemeOptions {
+    color?: Partial<Color>;
+  }
+}
+
+const common = '#3F51B5';
+const uncommon = '#661FFF';
+const rare = '#D61FFF';
+const epic = '#FF1FB8';
+const legendary = '#FF661F';
+
+const gradient = (colors: string[]) =>
+  `linear-gradient(135deg, ${colors.join(', ')})`;
 
 const theme = createMuiTheme({
   typography: {
@@ -11,7 +42,6 @@ const theme = createMuiTheme({
       letterSpacing: -1.5,
     },
     h2: {
-      fontFamily: 'Roboto, sans-serif',
       fontStyle: 'normal',
       fontWeight: 500,
       fontSize: 36,
@@ -19,7 +49,6 @@ const theme = createMuiTheme({
       letterSpacing: -0.5,
     },
     h3: {
-      fontFamily: 'Roboto, sans-serif',
       fontStyle: 'normal',
       fontWeight: 500,
       fontSize: 24,
@@ -33,7 +62,6 @@ const theme = createMuiTheme({
       lineHeight: '140%',
     },
     h5: {
-      fontFamily: 'Roboto, sans-serif',
       fontStyle: 'normal',
       fontWeight: 500,
       fontSize: 20,
@@ -49,7 +77,6 @@ const theme = createMuiTheme({
       letterSpacing: 0.15,
     },
     subtitle1: {
-      fontFamily: 'Roboto, sans-serif',
       fontStyle: 'normal',
       fontWeight: 500,
       fontSize: 16,
@@ -65,7 +92,6 @@ const theme = createMuiTheme({
       letterSpacing: 0.1,
     },
     body1: {
-      fontFamily: 'Roboto, sans-serif',
       fontStyle: 'normal',
       fontWeight: 'normal',
       fontSize: 16,
@@ -81,7 +107,6 @@ const theme = createMuiTheme({
       letterSpacing: 0.25,
     },
     button: {
-      fontFamily: 'Roboto, sans-serif',
       fontStyle: 'normal',
       fontWeight: 500,
       fontSize: 14,
@@ -90,7 +115,6 @@ const theme = createMuiTheme({
       textTransform: 'uppercase',
     },
     caption: {
-      fontFamily: 'Roboto, sans-serif',
       fontStyle: 'normal',
       fontWeight: 'normal',
       fontSize: 12,
@@ -98,7 +122,6 @@ const theme = createMuiTheme({
       letterSpacing: 0.4,
     },
     overline: {
-      fontFamily: 'Roboto, sans-serif',
       fontStyle: 'normal',
       fontWeight: 500,
       fontSize: 10,
@@ -116,9 +139,24 @@ const theme = createMuiTheme({
       secondary: '#fff',
     },
   },
-  //   palette: {
-  //     type: 'dark',
-  //   },
+  color: {
+    common,
+    uncommon,
+    rare,
+    epic,
+    legendary,
+    commonGradient1: gradient([common, uncommon]),
+    commonGradient2: gradient([common, uncommon, rare]),
+    commonGradient3: gradient([common, uncommon, rare, epic]),
+    commonGradient4: gradient([common, uncommon, rare, epic, legendary]),
+    uncommonGradient1: gradient([uncommon, rare]),
+    uncommonReverseGradient1: gradient([rare, uncommon]),
+    uncommonGradient2: gradient([uncommon, rare, epic]),
+    uncommonGradient3: gradient([uncommon, rare, epic, legendary]),
+    rareGradient1: gradient([rare, epic]),
+    rareGradient2: gradient([rare, epic, legendary]),
+    epicGradient1: gradient([epic, legendary]),
+  },
 });
 
 export default theme;
