@@ -6,8 +6,8 @@ import SectionIcon from '../components/section-icon';
 
 const SearchSection: FC = () => (
   <Section height={640} background="uncommonGradient1" skewedTop skewedBottom>
-    <Row spacing={4} color="white">
-      <Column spacing={4} alignItems="center">
+    <Row spacing={4} color="white" justifyContent="space-evenly">
+      <Column spacing={4} alignItems="center" flexBasis="50%">
         <SectionIcon
           icon={require('../images/search.svg')}
           background="uncommonReverseGradient1"

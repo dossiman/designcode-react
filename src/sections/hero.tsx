@@ -8,8 +8,8 @@ import CTA from '../components/cta';
 const Hero: FC = () => {
   return (
     <Section height={640} background="uncommonGradient2" skewedBottom>
-      <Row>
-        <Column spacing={4} py={8} color="white">
+      <Row justifyContent="space-evenly">
+        <Column spacing={4} py={8} color="white" flexBasis="60%">
           <KanjiverseLogo />
           <Typography variant="h1">
             Learn Kanjis.

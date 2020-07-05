@@ -10,7 +10,6 @@ declare module '@material-ui/core/styles/createMuiTheme' {
     rare: string;
     epic: string;
     legendary: string;
-    heroGradient: string;
   }
 
   interface Theme {
@@ -147,11 +146,13 @@ const theme = createMuiTheme({
     legendary,
     commonGradient1: gradient([common, uncommon]),
     commonGradient2: gradient([common, uncommon, rare]),
+    commonReverseGradient2: gradient([rare, uncommon, common]),
     commonGradient3: gradient([common, uncommon, rare, epic]),
     commonGradient4: gradient([common, uncommon, rare, epic, legendary]),
     uncommonGradient1: gradient([uncommon, rare]),
     uncommonReverseGradient1: gradient([rare, uncommon]),
     uncommonGradient2: gradient([uncommon, rare, epic]),
+    uncommonReverseGradient2: gradient([epic, rare, uncommon]),
     uncommonGradient3: gradient([uncommon, rare, epic, legendary]),
     rareGradient1: gradient([rare, epic]),
     rareGradient2: gradient([rare, epic, legendary]),

@@ -14,14 +14,14 @@ const ListItem: FC = ({ children }) => (
 const DesignSection: FC = () => {
   return (
     <Section>
-      <Row spacing={4}>
+      <Row spacing={4} justifyContent="space-evenly">
         <img
           width="375"
           height="674"
           src={require('../images/cards-example.png')}
           alt="Card Samples"
         />
-        <Column spacing={4} alignItems="center">
+        <Column spacing={4} alignItems="center" flexBasis="40%">
           <SectionIcon
             icon={require('../images/stack.svg')}
             background="uncommonGradient1"

@@ -3,6 +3,7 @@ import React, { FC } from 'react';
 // import Footer from './footer';
 import {
   Box,
+  Container,
   CssBaseline,
   ThemeProvider as MuiThemeProvider,
 } from '@material-ui/core';
